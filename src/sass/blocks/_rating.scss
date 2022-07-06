@@ -1,0 +1,44 @@
+.rating {
+    padding-top: 120px;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: minmax(70px, auto);
+        gap: 30px 45px;
+        &-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            &:before {
+                content: "";
+                position: absolute;
+                height: 14px;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                background-color: $light-gray;
+            }
+            &-head {
+                margin-top: 8px;
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-left: 15px;
+                z-index: 2;
+                @include before_circle;
+                &:before {
+                    top: -8px;
+                }
+            }
+            &-body {
+                margin-top: 27px;
+                height: 14px;
+                background-color: $main-color;
+                border-radius: 4px;
+                position: relative;
+                z-index: 10;
+            }
+        }
+    }
+}

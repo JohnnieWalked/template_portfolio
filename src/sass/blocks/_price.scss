@@ -1,0 +1,34 @@
+.price {
+    padding-top: 120px;
+    &__title {
+        text-align: center;
+        padding: 0;
+        &:before {
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 366px);
+        justify-content: space-between;
+        margin: 60px 50px 0;
+        ul {
+            display: flex;
+            list-style-type: none;
+            flex-direction: column;
+            li {
+                display: grid;
+                grid-template: 21px 14px / 200px 35px;
+                justify-content: space-between;
+                align-content: space-between;
+            }
+        }
+    }
+    // &__item-head {
+    // }
+    // &__item-body {
+    // }
+    
+}
