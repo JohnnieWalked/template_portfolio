@@ -13,3 +13,16 @@
     font-size: 12px;
     line-height: 18px;
 }
+
+.form_label {
+    position: absolute;
+    padding: 0 8px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $black;
+    top: -9px;
+    left: 20px;
+    background-color: $white;
+    margin-bottom: 0;
+}

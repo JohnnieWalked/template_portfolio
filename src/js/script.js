@@ -9,21 +9,25 @@ const ham = document.querySelector(".ham"),
 
 ham.addEventListener('click', () => {
     menu.classList.add("active");
+    document.body.style.overflow = 'hidden';
 });
 
 closeHam.addEventListener('click', (e) => {
     menu.classList.remove("active");
+    document.body.style.overflow = '';
 });
 
 menuOverlay.addEventListener('click', (e) => {
     if (e.target == menuOverlay) {
         menu.classList.remove("active");
+        document.body.style.overflow = '';
     }
 });
 
 document.body.addEventListener("keydown", (e) => {
     if (menu.classList.contains("active") && e.code == "Escape") {
         menu.classList.remove("active");
+        document.body.style.overflow = '';
     }
 });
 
